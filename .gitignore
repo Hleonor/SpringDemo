@@ -14,3 +14,10 @@ gen
 
 setting.xml
 !/.gitignore
+/target/classes/org/Moc/springtest/UserAddTest.class
+/target/classes/org/Moc/User.class
+
+# ignore class
+*.class
+!/.gitignore
+!/.idea/.gitignore
