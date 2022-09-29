@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--（一）配置User对象创建-->
@@ -34,6 +35,14 @@
         -->
         <property name = "bname" value = "Java"></property>
         <property name = "bauthor" value = "Moc"></property>
+        <!--为属性设置空值-->
+        <!--<property name = "address">
+            <null/>
+        </property>-->
+
+        <property name="address">
+            <value><![CDATA[<<海南>>]]></value>
+        </property>
     </bean>
 
     <!--使用有参构造方法注入属性-->
@@ -45,4 +54,8 @@
         <constructor-arg name = "oname" value = "Moc"></constructor-arg>
         <constructor-arg name = "oaddress" value = "China"></constructor-arg>
     </bean>
+
+    <!--使用p命名空间注入属性-->
+    <bean id = "student" class = "org.Moc.Student" p:sname = "Hleonor" p:sage = "18"></bean>
+
 </beans>
