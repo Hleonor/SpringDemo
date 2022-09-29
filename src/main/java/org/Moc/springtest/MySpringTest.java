@@ -2,6 +2,7 @@ package org.Moc.springtest;
 
 import org.Moc.Book;
 import org.Moc.Orders;
+import org.Moc.Student;
 import org.Moc.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -46,5 +47,18 @@ public class MySpringTest
         // 2、获取配置文件创建的对象
         Orders orders = context.getBean("orders" , Orders.class);
         System.out.println(orders);
-        orders.testDemo(); }
+        orders.testDemo();
+    }
+
+    @Test
+    public void testStudent()
+    {
+        // 1、加载spring配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+
+        // 2、获取配置文件创建的对象
+        Student student = context.getBean("student" , Student.class);
+        System.out.println(student);
+        student.testStudent();
+    }
 }
