@@ -9,6 +9,7 @@
         <property name="ename" value="lucy"></property>
         <property name="gender" value="female"></property>
         <property name="dept" ref="dept"></property>
+        <property name="dept.dname" value="人事部门"></property>
         <!--级联赋值-->
     </bean>
     <bean id="dept" class="org.Moc.bean.Dept">

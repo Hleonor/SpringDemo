@@ -25,6 +25,11 @@ public class Emp
         this.gender = gender;
     }
 
+    public Dept getDept()
+    {
+        return dept;
+    }
+
     public void add()
     {
         System.out.println(ename + "::" + "gender: " + dept.toString());
