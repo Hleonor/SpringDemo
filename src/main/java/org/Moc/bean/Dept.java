@@ -8,4 +8,12 @@ public class Dept
     {
         this.dname = dname;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Dept{" +
+                "dname='" + dname + '\'' +
+                '}';
+    }
 }

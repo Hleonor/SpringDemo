@@ -1,6 +1,7 @@
 package org.Moc.springtest;
 
 import org.Moc.User;
+import org.Moc.bean.Emp;
 import org.Moc.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -18,5 +19,15 @@ public class TestBean
         UserService userService = context.getBean("userService" , UserService.class);
         System.out.println(userService);
         userService.add();
+    }
+
+    @Test
+    public void testBean2()
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+
+        Emp emp = context.getBean("Emp" , Emp.class);
+        System.out.println(emp);
+        emp.add();
     }
 }

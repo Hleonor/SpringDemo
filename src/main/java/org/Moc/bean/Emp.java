@@ -1,5 +1,7 @@
 package org.Moc.bean;
 
+import org.junit.jupiter.api.Test;
+
 public class Emp
 {
     private String ename;
@@ -21,5 +23,10 @@ public class Emp
     public void setGender(String gender)
     {
         this.gender = gender;
+    }
+
+    public void add()
+    {
+        System.out.println(ename + "::" + "gender: " + dept.toString());
     }
 }

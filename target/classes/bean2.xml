@@ -13,7 +13,7 @@
             <property name="userDao" ref="userDaoImp1"></property>
         </bean>
             
-            
+        <!--外部bean的方式-->
         <bean id = "userDaoImp1" class = "org.Moc.dao.UserDaoImp1"></bean>
         <!--2 set方法设置属性-->
 </beans>
