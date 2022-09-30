@@ -19,5 +19,4 @@ setting.xml
 
 # ignore class
 *.class
-!/.gitignore
 !/.idea/.gitignore
