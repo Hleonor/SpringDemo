@@ -39,5 +39,20 @@
                 <value>苇名十字斩</value>
             </set>
         </property>
+        <!--注入list集合类型，但是元素类型时对象-->
+        <property name="courseList">
+            <list>
+                <ref bean="course1"></ref>
+                <ref bean="course2"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <!--创建多个course对象-->
+    <bean id="course1" class="com.springdemo.colletiontype.Course">
+        <property name="cname" value="幻术"></property>
+    </bean>
+    <bean id="course2" class="com.springdemo.colletiontype.Course">
+        <property name="cname" value="忍术"></property>
     </bean>
 </beans>
