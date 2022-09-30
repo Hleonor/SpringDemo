@@ -1,5 +1,6 @@
 package com.springdemo.colletiontype;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -36,5 +37,13 @@ public class Stu
     public void setSets(Set<String> sets)
     {
         this.sets = sets;
+    }
+
+    public void test()
+    {
+        System.out.println(Arrays.toString(courses));
+        System.out.println(list);
+        System.out.println(maps);
+        System.out.println(sets);
     }
 }

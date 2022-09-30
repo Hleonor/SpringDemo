@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--集合类型属性注入-->
+    <bean id = "stu" class="com.springdemo.colletiontype.Stu">
+        <!--数组类型属性注入-->
+        <property name="courses" >
+            <array>
+                <value>夺回皇子</value>
+                <value>断绝不死</value>
+            </array>
+        </property>
+        <!--list类型属性注入-->
+        <property name="list">
+            <list>
+                <value>狮子猿</value>
+                <value>巨型忍者 枭</value>
+                <value>破戒僧</value>
+                <value>巴流 苇名弦一郎</value>
+                <value>心中的一心</value>
+            </list>
+        </property>
+        <!--maps类型属性注入-->
+        <property name="maps">
+            <map>
+                <entry key="1" value="哼将糖"> </entry>
+                <entry key="2" value="夜露叉糖"> </entry>
+                <entry key="3" value="纸人"> </entry>
+                <entry key="4" value="归佛"> </entry>
+            </map>
+        </property>
+        <!--set类型属性注入-->
+        <property name="sets">
+            <set>
+                <value>巨型忍者突刺</value>
+                <value>不死斩</value>
+                <value>苇名十字斩</value>
+            </set>
+        </property>
+    </bean>
+</beans>
