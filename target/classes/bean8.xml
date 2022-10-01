@@ -6,4 +6,7 @@
     <bean id = "orders" class="com.springdemo.bean.Orders" init-method="initMethod" destroy-method="destroyMethod">
         <property name="oname" value="祭祀"></property>
     </bean>
+
+    <!--配置后置处理器-->
+    <bean id="myBeanPost" class="com.springdemo.bean.MyBeanPost"></bean>
 </beans>
