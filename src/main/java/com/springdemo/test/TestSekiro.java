@@ -1,5 +1,6 @@
-package com.springdemo.colletiontype.test;
+package com.springdemo.test;
 
+import com.springdemo.bean.Orders;
 import com.springdemo.colletiontype.Book;
 import com.springdemo.colletiontype.Course;
 import com.springdemo.colletiontype.Stu;
@@ -31,11 +32,25 @@ public class TestSekiro
     }
 
     @Test
-    public void testBean3()
+    public void testBean2()
     {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("bean7.xml");
         Course course = context.getBean("myBean" , Course.class);
         System.out.println(course);
     }
+
+    @Test
+    public void  testBean3()
+    {
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("bean8.xml");
+        Orders orders = context.getBean("orders" , Orders.class);
+        System.out.println("第四步 获取创建bean实例对象");
+        System.out.println(orders);
+
+        // 手动销毁bean实例
+        ((ClassPathXmlApplicationContext)context).close();
+    }
+
 }
