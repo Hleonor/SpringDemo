@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- 集合类型属性注入，但是提取出公共部分供其他类复用-->
+    <util:list id="bookList">
+        <value>苇名秘技</value>
+        <value>战斗记忆</value>
+    </util:list>
+
+    <!-- 提取list集合类型属性注入使用-->
+    <bean id = "book" class="com.springdemo.colletiontype.Book" scope="prototype">
+        <property name="list" ref="bookList"></property>
+    </bean>
+</beans>
