@@ -15,7 +15,7 @@ public class TestSekiro
     public void testCollection()
     {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("bean5.xml");
+                new ClassPathXmlApplicationContext("bean01/bean5.xml");
         Stu stu = context.getBean("stu" , Stu.class);
         stu.test();
     }
@@ -24,7 +24,7 @@ public class TestSekiro
     public void testBook()
     {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("bean6.xml");
+                new ClassPathXmlApplicationContext("bean01/bean6.xml");
         Book book = context.getBean("book" , Book.class);
         Book book1 = context.getBean("book" , Book.class);
         // book.testList();
@@ -36,7 +36,7 @@ public class TestSekiro
     public void testBean2()
     {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("bean7.xml");
+                new ClassPathXmlApplicationContext("bean01/bean7.xml");
         Course course = context.getBean("myBean" , Course.class);
         System.out.println(course);
     }
@@ -45,7 +45,7 @@ public class TestSekiro
     public void  testBean3()
     {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("bean8.xml");
+                new ClassPathXmlApplicationContext("bean01/bean8.xml");
         Orders orders = context.getBean("orders" , Orders.class);
         System.out.println("第四步 获取创建bean实例对象");
         System.out.println(orders);
@@ -57,7 +57,7 @@ public class TestSekiro
     @Test
     public void testBean4()
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean9.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean01/bean9.xml");
         Emp emp = context.getBean("emp" , Emp.class);
         System.out.println(emp);
     }

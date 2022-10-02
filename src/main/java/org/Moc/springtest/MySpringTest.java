@@ -18,7 +18,7 @@ public class MySpringTest
     public void testAdd()
     {
         // 1、加载spring配置文件
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean01/bean1.xml");
 
         // 2、获取配置文件创建的对象
         User user = context.getBean("user" , User.class);
@@ -30,7 +30,7 @@ public class MySpringTest
     public void testBook1()
     {
         // 1、加载spring配置文件
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean01/bean1.xml");
 
         // 2、获取配置文件创建的对象
         Book book = context.getBean("book" , Book.class);
@@ -42,7 +42,7 @@ public class MySpringTest
     public void testOrders()
     {
         // 1、加载spring配置文件
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean01/bean1.xml");
 
         // 2、获取配置文件创建的对象
         Orders orders = context.getBean("orders" , Orders.class);
@@ -54,7 +54,7 @@ public class MySpringTest
     public void testStudent()
     {
         // 1、加载spring配置文件
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean01/bean1.xml");
 
         // 2、获取配置文件创建的对象
         Student student = context.getBean("student" , Student.class);
