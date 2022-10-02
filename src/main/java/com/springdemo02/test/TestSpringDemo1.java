@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestSpringDemo1
 {
     @Test
-    public void testService()
+    public void testUserService()
     {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("bean02/bean1.xml");
