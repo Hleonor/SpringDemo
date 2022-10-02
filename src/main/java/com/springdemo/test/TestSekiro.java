@@ -1,5 +1,6 @@
 package com.springdemo.test;
 
+import com.springdemo.autoware.Emp;
 import com.springdemo.bean.Orders;
 import com.springdemo.colletiontype.Book;
 import com.springdemo.colletiontype.Course;
@@ -53,4 +54,11 @@ public class TestSekiro
         ((ClassPathXmlApplicationContext)context).close();
     }
 
+    @Test
+    public void testBean4()
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean9.xml");
+        Emp emp = context.getBean("emp" , Emp.class);
+        System.out.println(emp);
+    }
 }
