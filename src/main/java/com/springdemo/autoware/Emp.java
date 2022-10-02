@@ -2,9 +2,9 @@ package com.springdemo.autoware;
 
 public class Emp
 {
-    private Dept dept;
+    private Dept1 dept;
 
-    public void setDept(Dept dept)
+    public void setDept(Dept1 dept)
     {
         this.dept = dept;
     }

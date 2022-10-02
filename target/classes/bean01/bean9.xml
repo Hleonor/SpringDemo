@@ -12,6 +12,6 @@
     <bean id = "emp" class="com.springdemo.autoware.Emp" autowire="byName">
 
     </bean>
-    <bean id = "dept" class="com.springdemo.autoware.Dept"></bean>
-    <bean id = "dept1" class="com.springdemo.autoware.Dept"></bean>
+    <bean id = "dept" class="com.springdemo.autoware.Dept1"></bean>
+    <bean id = "dept1" class="com.springdemo.autoware.Dept1"></bean>
 </beans>

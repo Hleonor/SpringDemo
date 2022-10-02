@@ -1,5 +1,5 @@
 package com.springdemo.autoware;
 
-public class Dept
+public class Dept1
 {
 }
