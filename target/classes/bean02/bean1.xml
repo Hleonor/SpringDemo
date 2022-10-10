@@ -11,4 +11,12 @@
     -->
     <context:component-scan base-package="com.springdemo02.service"></context:component-scan>
 
+    <!-- 实例1：
+        use-default-filters="false"：关闭默认过滤器，自己配置过滤器
+        context:include-filter：设置扫描包时，包含哪些组件
+    -->
+
+    <context:component-scan base-package="com.springdemo02" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
 </beans>
