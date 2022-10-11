@@ -1,6 +1,7 @@
 package com.springdemo02.service;
 
 import com.springdemo02.dao.UserDao;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -19,9 +20,12 @@ public class UserService
     @Resource(name = "userDaoImp2") // 相当于上面两个注解的结合，使用resource需要指定name属性
     private UserDao userDao;
 
+    @Value(value = "iShin") // 注入普通类型的属性
+    private String name;
     public void add()
     {
-        System.out.println("Service add.....");
+        System.out.println("Service add....." + name);
         userDao.add();
+
     }
 }
