@@ -1,8 +1,10 @@
 package com.springdemo02.test;
 
+import com.config.SpringConfig;
 import com.springdemo02.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpringDemo1
@@ -12,6 +14,16 @@ public class TestSpringDemo1
     {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("bean02/bean1.xml");
+        UserService userService = context.getBean("userService" , UserService.class);
+        System.out.println(userService);
+        userService.add();
+    }
+
+    @Test
+    public void testUserService2()
+    {
+        // 1.加载配置类
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         UserService userService = context.getBean("userService" , UserService.class);
         System.out.println(userService);
         userService.add();
