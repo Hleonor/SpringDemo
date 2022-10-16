@@ -13,6 +13,6 @@ public class TestAop
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("aopbean/bean01.xml");
         User user = context.getBean("user", User.class);
-        user.add();
+        user.add(); // 调用被增强的方法
     }
 }
