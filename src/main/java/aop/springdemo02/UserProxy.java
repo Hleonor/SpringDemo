@@ -25,7 +25,7 @@ public class UserProxy
     }
 
     @AfterReturning(value = "execution(* aop.springdemo02.User.add(..))")
-    // 后置通知，返回通知
+    // 后置通知，返回通知，有异常不会执行
     public void afterReturning()
     {
         System.out.println("after returning....");
