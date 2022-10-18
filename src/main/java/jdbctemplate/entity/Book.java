@@ -1,6 +1,6 @@
 package jdbctemplate.entity;
 
-public class user
+public class Book
 {
     public String getUserId()
     {
