@@ -5,7 +5,7 @@
 
         <!--1 service和Dao对象创建-->
 
-        <bean id = "userService" class = "org.Moc.service.UserService">
+        <bean id = "userService" class = "ioc.Moc.service.UserService">
             <!--注入UserDao对象
                  name属性值，类里面属性名称
                  ref属性值，注入的对象名称
@@ -14,6 +14,6 @@
         </bean>
             
         <!--外部bean的方式-->
-        <bean id = "userDaoImp1" class = "org.Moc.dao.UserDaoImp1"></bean>
+        <bean id = "userDaoImp1" class = "ioc.Moc.dao.UserDaoImp1"></bean>
         <!--2 set方法设置属性-->
 </beans>

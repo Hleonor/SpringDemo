@@ -11,7 +11,7 @@
         3、name属性用于指定对象的别名，可以加一些特殊符号
         4、创建对象的时候，默认执行无参构造方法
     -->
-    <bean id = "user" class = "org.Moc.User"></bean>
+    <bean id = "user" class = "ioc.Moc.User"></bean>
 
 
     <!--（二）基于xml方式注入属性-->
@@ -28,7 +28,7 @@
     -->
 
     <!--使用set方式注入属性-->
-    <bean id = "book" class = "org.Moc.Book">
+    <bean id = "book" class = "ioc.Moc.Book">
         <!--使用property完成属性注入
             name属性用于指定属性名称
             value属性用于指定属性值
@@ -46,7 +46,7 @@
     </bean>
 
     <!--使用有参构造方法注入属性-->
-    <bean id = "orders" class = "org.Moc.Orders">
+    <bean id = "orders" class = "ioc.Moc.Orders">
         <!--使用constructor-arg完成属性注入
             name属性用于指定属性名称
             value属性用于指定属性值
@@ -56,6 +56,6 @@
     </bean>
 
     <!--使用p命名空间注入属性-->
-    <bean id = "student" class = "org.Moc.Student" p:sname = "Hleonor" p:sage = "18"></bean>
+    <bean id = "student" class = "ioc.Moc.Student" p:sname = "Hleonor" p:sage = "18"></bean>
 
 </beans>
