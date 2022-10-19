@@ -13,12 +13,23 @@ public class TestBook
     {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("jdbctemplate/bean01.xml");
+
         BookService bookService = context.getBean("bookService", BookService.class);
+        // 添加
         Book book = new Book();
         book.setUserId("1");
         book.setUserName("苇名流");
         book.setuStatus("S++");
         bookService.addBook(book);
 
+        // 修改
+//        Book book = new Book();
+//        book.setUserId("1");
+//        book.setUserName("丈的手记");
+//        book.setuStatus("S");
+//        bookService.updateBook(book);
+
+        // 删除
+        bookService.deleteBook("1");
     }
 }

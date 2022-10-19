@@ -25,4 +25,22 @@ public class BookDaoImpl implements BookDao
         int update = jdbcTemplate.update(sql, args);
         System.out.println(update);
     }
+
+    @Override
+    public void updateBook(Book book)
+    {
+        String sql = "update t_book set username=?, ustatus=? where user_id=?";
+        Object[] args = {book.getUserName(), book.getuStatus(), book.getUserId()};
+        int update = jdbcTemplate.update(sql, args);
+        System.out.println(update);
+    }
+
+    @Override
+    public void deleteBook(String id)
+    {
+        String sql = "delete from t_book where user_id=?";
+        int update = jdbcTemplate.update(sql, id);
+        System.out.println(update);
+
+    }
 }
