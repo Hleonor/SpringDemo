@@ -1,6 +1,5 @@
 package jdbctemplate.test;
 
-import jdbctemplate.entity.Book;
 import jdbctemplate.service.BookService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -16,11 +15,11 @@ public class TestBook
 
         BookService bookService = context.getBean("bookService", BookService.class);
         // 添加
-        Book book = new Book();
-        book.setUserId("1");
-        book.setUserName("苇名流");
-        book.setuStatus("S++");
-        bookService.addBook(book);
+//        Book book = new Book();
+//        book.setUserId("1");
+//        book.setUserName("苇名流");
+//        book.setuStatus("S++");
+//        bookService.addBook(book);
 
         // 修改
 //        Book book = new Book();
@@ -30,6 +29,10 @@ public class TestBook
 //        bookService.updateBook(book);
 
         // 删除
-        bookService.deleteBook("1");
+//        bookService.deleteBook("1");
+
+        // 查询某个值
+        int count = bookService.findCount();
+        System.out.println("查询结果: " + count);
     }
 }

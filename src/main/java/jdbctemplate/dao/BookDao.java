@@ -12,4 +12,7 @@ public interface BookDao
 
     // 删除的方法
     void deleteBook(String id);
+
+    // 查询表中的记录数
+    int selectCount();
 }
