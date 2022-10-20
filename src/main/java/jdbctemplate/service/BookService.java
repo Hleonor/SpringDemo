@@ -5,6 +5,8 @@ import jdbctemplate.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BookService
 {
@@ -40,5 +42,11 @@ public class BookService
     public Book findOne(String id)
     {
         return bookDao.findBookInfo(id);
+    }
+
+    // 查询返回集合
+    public List<Book> findAll()
+    {
+        return bookDao.findAllBook();
     }
 }

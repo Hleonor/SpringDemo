@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+
 public class TestBook
 {
     @Test
@@ -37,7 +39,11 @@ public class TestBook
 //        System.out.println("查询结果: " + count);
 
         // 查询返回对象
-        Book book = bookService.findOne("1");
-        System.out.println(book);
+//        Book book = bookService.findOne("1");
+//        System.out.println(book);
+
+        // 查询返回集合
+        List<Book> all = bookService.findAll();
+        System.out.println(all);
     }
 }

@@ -6,6 +6,8 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class BookDaoImpl implements BookDao
 {
@@ -63,5 +65,15 @@ public class BookDaoImpl implements BookDao
         // 第二个参数RowMapper是接口，针对返回不同类型数据，使用这个接口实现类完成数据封装
         Book book = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Book>(Book.class), id);
         return book;
+    }
+
+    // 查询返回集合
+    @Override
+    public List<Book> findAllBook()
+    {
+        String sql = "select * from t_book";
+        // 调用方法
+        List<Book> bookList = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Book>(Book.class));
+        return bookList;
     }
 }

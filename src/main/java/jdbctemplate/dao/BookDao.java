@@ -2,6 +2,8 @@ package jdbctemplate.dao;
 
 import jdbctemplate.entity.Book;
 
+import java.util.List;
+
 public interface BookDao
 {
     // 添加的方法
@@ -18,4 +20,7 @@ public interface BookDao
 
     // 返回书籍信息对象
     Book findBookInfo(String id);
+
+    // 查询返回集合
+    List<Book> findAllBook();
 }
