@@ -2,6 +2,16 @@ package jdbctemplate.entity;
 
 public class Book
 {
+    @Override
+    public String toString()
+    {
+        return "Book{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", uStatus='" + uStatus + '\'' +
+                '}';
+    }
+
     public String getUserId()
     {
         return userId;

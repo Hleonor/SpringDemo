@@ -15,4 +15,7 @@ public interface BookDao
 
     // 查询表中的记录数
     int selectCount();
+
+    // 返回书籍信息对象
+    Book findBookInfo(String id);
 }

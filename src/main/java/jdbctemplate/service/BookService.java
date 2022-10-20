@@ -35,4 +35,10 @@ public class BookService
     {
         return bookDao.selectCount();
     }
+
+    // 查询书籍信息
+    public Book findOne(String id)
+    {
+        return bookDao.findBookInfo(id);
+    }
 }

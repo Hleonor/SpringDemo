@@ -2,6 +2,7 @@ package jdbctemplate.dao;
 
 import jdbctemplate.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -51,5 +52,16 @@ public class BookDaoImpl implements BookDao
         String sql = "select count(*) from t_book";
         Integer count = jdbcTemplate.queryForObject(sql, Integer.class);
         return count;
+    }
+
+    // 查询返回对象
+    @Override
+    public Book findBookInfo(String id)
+    {
+        String sql = "select * from t_book where user_id=?";
+        // 调用方法
+        // 第二个参数RowMapper是接口，针对返回不同类型数据，使用这个接口实现类完成数据封装
+        Book book = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Book>(Book.class), id);
+        return book;
     }
 }
