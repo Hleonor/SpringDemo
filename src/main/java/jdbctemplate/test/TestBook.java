@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TestBook
@@ -43,7 +44,17 @@ public class TestBook
 //        System.out.println(book);
 
         // 查询返回集合
-        List<Book> all = bookService.findAll();
-        System.out.println(all);
+//        List<Book> all = bookService.findAll();
+//        System.out.println(all);
+
+        // 批量添加
+        List<Object[]> batchArgs = new ArrayList<>();
+        Object[] o1 = {"6", "寄鹰斩", "B"};
+        Object[] o2 = {"7", "不死斩", "S"};
+        Object[] o3 = {"8", "雷电奉还", "S++"};
+        batchArgs.add(o1);
+        batchArgs.add(o2);
+        batchArgs.add(o3);
+        bookService.batchAdd(batchArgs);
     }
 }

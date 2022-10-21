@@ -23,4 +23,6 @@ public interface BookDao
 
     // 查询返回集合
     List<Book> findAllBook();
+
+    void batchAddBook(List<Object[]> batchArgs);
 }
