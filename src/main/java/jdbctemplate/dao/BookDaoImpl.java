@@ -104,6 +104,6 @@ public class BookDaoImpl implements BookDao
     {
         String sql = "delete from t_book where user_id=?";
         int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
-        System.out.println(ints);
+        System.out.println(Arrays.toString(ints));
     }
 }
