@@ -61,4 +61,10 @@ public class BookService
     {
         bookDao.batchUpdateBook(batchArgs);
     }
+
+    // 批量删除
+    public void batchDelete(List<Object[]> batchArgs)
+    {
+        bookDao.batchDeleteBook(batchArgs);
+    }
 }

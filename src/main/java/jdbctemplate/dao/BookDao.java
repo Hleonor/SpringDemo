@@ -29,4 +29,7 @@ public interface BookDao
 
     // 批量修改
     void batchUpdateBook(List<Object[]> batchArgs);
+
+    // 批量删除
+    void batchDeleteBook(List<Object[]> batchArgs);
 }

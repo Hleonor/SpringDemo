@@ -58,13 +58,23 @@ public class TestBook
 //        bookService.batchAdd(batchArgs);
 
         // 批量修改
+//        List<Object[]> batchArgs = new ArrayList<>();
+//        Object[] o1 = {"旋风斩", "B", "6"};
+//        Object[] o2 = {"仙峰脚", "B", "7"};
+//        Object[] o3 = {"识破", "SS++", "8"};
+//        batchArgs.add(o1);
+//        batchArgs.add(o2);
+//        batchArgs.add(o3);
+//        bookService.batchUpdate(batchArgs);
+
+        // 批量删除
         List<Object[]> batchArgs = new ArrayList<>();
-        Object[] o1 = {"旋风斩", "B", "6"};
-        Object[] o2 = {"仙峰脚", "B", "7"};
-        Object[] o3 = {"识破", "SS++", "8"};
+        Object[] o1 = {"3"};
+        Object[] o2 = {"5"};
+        Object[] o3 = {"1"};
         batchArgs.add(o1);
         batchArgs.add(o2);
         batchArgs.add(o3);
-        bookService.batchUpdate(batchArgs);
+        bookService.batchDelete(batchArgs);
     }
 }
