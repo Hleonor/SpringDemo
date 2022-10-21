@@ -30,6 +30,7 @@ public class BookDaoImpl implements BookDao
         System.out.println(update);
     }
 
+    // 修改方法
     @Override
     public void updateBook(Book book)
     {
@@ -83,6 +84,15 @@ public class BookDaoImpl implements BookDao
     public void batchAddBook(List<Object[]> batchArgs)
     {
         String sql = "insert into t_book value(?,?,?)";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+    }
+
+    // 批量修改方法
+    @Override
+    public void batchUpdateBook(List<Object[]> batchArgs)
+    {
+        String sql = "update t_book set username=?, ustatus=? where user_id=?";
         int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
         System.out.println(Arrays.toString(ints));
     }
