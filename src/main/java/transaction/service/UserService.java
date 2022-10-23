@@ -29,7 +29,7 @@ public class UserService
             userDao.reduceMoney();
 
              // 模拟异常
-             int i = 10 / 0;
+             // int i = 10 / 0;
 
             // 神子多100
             userDao.addMoney();
