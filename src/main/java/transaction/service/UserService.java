@@ -2,11 +2,13 @@ package transaction.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import transaction.dao.UserDao;
 
 @Service
-@Transactional
+@Transactional(readOnly = false, timeout = 5, propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
 public class UserService
 {
     // 注入dao
