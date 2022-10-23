@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import transaction.dao.UserDao;
 
 @Service
-@Transactional(readOnly = false, timeout = 5, propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
+// @Transactional(readOnly = false, timeout = 5, propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
 public class UserService
 {
     // 注入dao

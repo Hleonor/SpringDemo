@@ -28,3 +28,8 @@
         2）rollbackForClassName：用于指定哪些异常需要回滚，可以指定异常的全类名。
         3）noRollbackFor：用于指定哪些异常不需要回滚，默认值为None.class，表示所有异常都需要回滚。
         4）noRollbackForClassName：用于指定哪些异常不需要回滚，可以指定异常的全类名。
+
+通过Spring配置文件配置事务
+    1、第一步：配置事务管理器
+    2、第二步：配置事务通知
+    3、第三步：配置事务切入点和切面
