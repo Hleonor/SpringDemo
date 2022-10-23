@@ -32,4 +32,5 @@ public class TestTransfer
         UserService userService = context.getBean("userService", UserService.class);
         userService.accountMoney();
     }
+
 }
